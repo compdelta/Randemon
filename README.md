@@ -1,5 +1,5 @@
-# RandÈmon
+# Rand√©mon
 
-Displays random PokÈmon pulled from [PokÈAPI](https://pokeapi.co/), using [pokeapi-js-wrapper](https://github.com/PokeAPI/pokeapi-js-wrapper) for caching. 
+Displays random Pok√©mon pulled from [Pok√©API](https://pokeapi.co/), using [pokeapi-js-wrapper](https://github.com/PokeAPI/pokeapi-js-wrapper) for caching. 
 
-Built for some Fetch API practise. Design is modeled on LeafGreen PokÈdex for fun.
+Design is modeled on LeafGreen Pok√©dex for fun.
