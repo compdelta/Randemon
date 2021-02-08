@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Randémon - Random Pokémon Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="content" id="header">
+        <div id = "title">
+            <img src="logo2.png" id="logo" alt="Randémon" title="Randémon">
+            <div id="pokeball">
+              <a href="#"><img src="pokeball.svg" id="button" alt="Click Poké Ball!" title="Click Poké Ball!" /></a>
+            </div>
+        </div>
+        <div id = "subtitle">
+          <p><span>Click Poké Ball</span> for random Pokémon!</p>
+        </div>
+      </div>
+
+      <div class="content"><h2 id="habitat">?????? POKéMON</h2></div>
+
+      <div id="mid">
+          <div id="mid-container-top">
+            <div id="mid-container-top-left">
+              <div id="mid-title">
+                <p id="number">No???</p>
+                <h2 id="name">??????</h2>
+              </div>
+
+              <div>
+                <p><span id="genus">??????</span> POKéMON</p>
+                <p>HT <span id="height">?'??"</span></p>
+                <p>WT <span id="weight">??.? lbs.</span></p>
+              </div>
+            </div>
+
+            <div id="mid-container-top-right">
+              <img id="image" src="unknown.png" />
+            </div>
+          </div>
+
+          <div id="mid-container-btm">
+            <p id="flavor">?????? ??? ?????? ?? ??? ???? ?? ?????? ??? ????</p>
+          </div>
+      </div>
+
+      <div id="bottom" class="content">
+        <p>Pokémon data pulled from <a href="https://pokeapi.co/">PokéAPI</a> using <a href="https://github.com/PokeAPI/pokeapi-js-wrapper">pokeapi-js-wrapper</a> for caching.</p>
+      </div>
+
+      <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+    <script src ="index.js"></script>
+  </body>
+</html>
