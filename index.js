@@ -1,3 +1,8 @@
+$(window).load(function () {
+  // Animate loader off screen
+  $(".se-pre-con").fadeOut("slow");
+});
+
 const customOptions = {
   protocol: "https",
   cache: true,
