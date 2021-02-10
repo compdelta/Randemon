@@ -20,7 +20,7 @@ const Image = document.getElementById("image");
 const Flavor = document.getElementById("flavor");
 let randomNumber = 0;
 
-Button.addEventListener("click", (doThis) => {
+function generatePokemon() {
   Button.classList.remove("animation");
   void Button.offsetWidth;
   Button.classList.add("animation");
@@ -56,5 +56,6 @@ Button.addEventListener("click", (doThis) => {
           useGrouping: false,
         }) +
         '"';
-    });
-}).catch((err) => console.error(err));
+    })
+    .catch((err) => console.error(err));
+}
