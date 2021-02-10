@@ -18,6 +18,11 @@ const Height = document.getElementById("height");
 const Weight = document.getElementById("weight");
 const Image = document.getElementById("image");
 const Flavor = document.getElementById("flavor");
+let habitatValue;
+let numberValue;
+let nameValue;
+let genusValue;
+let flavorValue;
 let randomNumber = 0;
 
 function generatePokemon() {
@@ -29,20 +34,25 @@ function generatePokemon() {
 
   P.getPokemonSpeciesByName(randomNumber)
     .then((res) => {
-      Habitat.innerHTML = res.habitat.name + " POKéMON";
-      Number.innerHTML =
+      habitatValue = res.habitat.name + " POKéMON";
+      numberValue =
         "No" +
         randomNumber.toLocaleString("en-US", {
           minimumIntegerDigits: 3,
           useGrouping: false,
         });
-      Name.innerHTML = res.varieties[0].pokemon.name;
-      Genus.innerHTML = res.genera[7].genus.split(" ").slice(0, -1).join(" ");
+      nameValue = res.varieties[0].pokemon.name;
+      genusValue = res.genera[7].genus.split(" ").slice(0, -1).join(" ");
+      flavorValue = res.flavor_text_entries[10].flavor_text;
       Image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/bf410e0800a1a755af809304346d0731879a7754/sprites/pokemon/other/dream-world/${randomNumber}.svg`;
-      Flavor.innerHTML = res.flavor_text_entries[10].flavor_text;
       return P.getPokemonByName(randomNumber);
     })
     .then((res) => {
+      Habitat.innerHTML = habitatValue;
+      Number.innerHTML = numberValue;
+      Name.innerHTML = nameValue;
+      Genus.innerHTML = genusValue;
+      Flavor.innerHTML = flavorValue;
       Weight.innerHTML = Math.round(res.weight * 0.22046 * 10) / 10 + " lbs.";
       let heightInches = Math.round(res.height * 3.937);
       let heightFeet = heightInches / 12;
